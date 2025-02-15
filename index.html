@@ -15,6 +15,9 @@
             .main-wrapper {
                 max-width: 680px;
                 margin-left: 10px;
+                @media only screen and (max-width: 800px) {
+                    max-width: 100%;
+                }
             }
             .main-wrapper header,
             .main-wrapper article,
@@ -40,6 +43,10 @@
             }
             .hero {
                 font-size: 40px;
+
+                @media only screen and (min-width: 600px) {
+                    text-align: center;
+                }
             }
             .hero span {
                 font-style: italic;
@@ -61,6 +68,9 @@
             }
             main .workhow-wrapper {
                 overflow: hidden;
+                @media only screen and (min-width: 800px) {
+                    width: 800px;
+                }
             }
             main .workhow {
                 margin: 0;
@@ -109,7 +119,7 @@
                 </div>
             </header>
             <div class="hero">
-                <article style="text-align: center">
+                <article>
                     You
                     <span style="text-decoration: line-through">might be</span>
                     are paying for <span>software</span> you don’t need! Reduce
