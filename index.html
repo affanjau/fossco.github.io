@@ -69,6 +69,9 @@
             .main-wrapper main h1 {
                 font-size: 35px;
             }
+            .main-wrapper .about {
+                transition-delay: 200ms;
+            }
             .main-wrapper .about p {
                 font-size: 25px;
             }
@@ -98,12 +101,21 @@
 
                 font-weight: 100;
             }
-            aside:hover {
+            /* aside:hover {
                 color: #eee;
                 background: #1c1c1c;
-            }
+            } */
             aside p {
                 font-size: 15px;
+            }
+            .tiles-wrap aside:nth-child(1) {
+                transition-delay: 200ms;
+            }
+            .tiles-wrap aside:nth-child(2) {
+                transition-delay: 400ms;
+            }
+            .tiles-wrap aside:nth-child(3) {
+                transition-delay: 500ms;
             }
             .sols {
                 display: flex;
@@ -128,10 +140,21 @@
                 margin: 4px 0;
                 font-size: 18px;
             }
-
             .sols-details p:nth-of-type(2) {
                 color: #707070;
                 font-size: 14px;
+            }
+            .sols:nth-child(2) {
+                transition-delay: 200ms;
+            }
+            .sols:nth-child(3) {
+                transition-delay: 400ms;
+            }
+            .sols:nth-child(4) {
+                transition-delay: 600ms;
+            }
+            .sols:nth-child(5) {
+                transition-delay: 800ms;
             }
             .contact-us {
                 margin-top: 35px;
@@ -222,6 +245,17 @@
             input:focus {
                 outline: none;
             }
+
+            .hidden {
+                opacity: 0;
+                transform: translateY(20%);
+                transition: all 1s;
+            }
+
+            .show {
+                opacity: 1;
+                transform: translateY(0);
+            }
         </style>
     </head>
     <body>
@@ -233,7 +267,7 @@
             </div>
         </header>
         <div class="hero">
-            <p>
+            <p class="hidden">
                 You
                 <span style="text-decoration: line-through; color: #444"
                     >might be</span
@@ -245,7 +279,7 @@
         </div>
         <div class="main-wrapper">
             <main>
-                <article class="about">
+                <article class="about hidden">
                     <h1>FOSS co.</h1>
                     <p>
                         FOSS co offers Free and Open-Source Software as
@@ -256,24 +290,24 @@
                     </p>
                 </article>
                 <article>
-                    <section>
+                    <section class="hidden">
                         <h1>How this Works</h1>
                         <div class="tiles-wrap">
-                            <aside>
+                            <aside class="hidden">
                                 <h2><span>1</span><br />Requirement</h2>
                                 <p>
                                     Tell us what you need - your goals, business
                                     type and features required.
                                 </p>
                             </aside>
-                            <aside>
+                            <aside class="hidden">
                                 <h2><span>2</span><br />Demo</h2>
                                 <p>
                                     See show our Solution works with a hands-on
                                     demo, tailored to your needs.
                                 </p>
                             </aside>
-                            <aside style="flex-basis: content">
+                            <aside class="hidden" style="flex-basis: content">
                                 <h2><span>3</span><br />Delivery</h2>
                                 <p>
                                     We set up and implement the solution,
@@ -285,9 +319,9 @@
                     </section>
                 </article>
                 <article>
-                    <section>
+                    <section class="hidden">
                         <h1>Solutions</h1>
-                        <div class="sols">
+                        <div class="sols hidden">
                             <div class="icon">
                                 <img src="inkscapelogo.png" />
                             </div>
@@ -296,7 +330,7 @@
                                 <p>Alternative to CorelDraw</p>
                             </div>
                         </div>
-                        <div class="sols">
+                        <div class="sols hidden">
                             <div class="icon">
                                 <img src="pdfgearlogo.png" />
                             </div>
@@ -305,7 +339,7 @@
                                 <p>Alternative to Adobe Acrobat</p>
                             </div>
                         </div>
-                        <div class="sols">
+                        <div class="sols hidden">
                             <div class="icon">
                                 <img src="signaturelogo.png" />
                             </div>
@@ -326,7 +360,7 @@
                         <p>& there is more...</p>
                     </section>
                 </article>
-                <div class="contact-us">
+                <div class="contact-us hidden">
                     <h1>Get in Touch</h1>
                     <div class="contact-wrapper">
                         <div class="contact">
@@ -356,7 +390,7 @@
                 </div>
             </main>
             <div class="footer-wrap">
-                <footer>
+                <footer class="hidden">
                     <p>
                         FOSS co is a
                         <strong>public benefit corporation.</strong>
@@ -371,5 +405,20 @@
                 <h1>FOSS</h1>
             </div>
         </div>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry);
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    } else {
+                        entry.target.classList.remove("show");
+                    }
+                });
+            });
+
+            const hiddenElements = document.querySelectorAll(".hidden");
+            hiddenElements.forEach((el) => observer.observe(el));
+        </script>
     </body>
 </html>
