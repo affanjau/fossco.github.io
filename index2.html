@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>FOSS - Free & Open-Source Software</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                width: 100%;
+                /* background: linear-gradient(to right, #a1ffce, #faffd1); */
+            }
+            .header-wrapper {
+                position: absolute;
+                top: 0;
+                height: 580px;
+                width: 100%;
+                background: linear-gradient(to right, #a1ffce, #faffd1);
+                z-index: 0;
+            }
+            .main-wrapper {
+                position: relative;
+                z-index: 10;
+                max-width: 680px;
+                margin: 0 auto;
+                @media only screen and (max-width: 800px) {
+                    max-width: 100%;
+                    margin: 5px 10px;
+                }
+            }
+            .main-wrapper header,
+            .main-wrapper article,
+            .main-wrapper main,
+            .main-wrapper footer {
+                margin: 40px 0;
+            }
+            header {
+                display: flex;
+            }
+            header h4 {
+                margin: -9px 0 0 3px;
+            }
+            header h3 {
+                font-weight: normal;
+            }
+            header h1 {
+                font-size: 50px;
+                margin: 15px 0 0 0;
+            }
+            header h1 span {
+                font-size: 20px;
+            }
+            .hero {
+                font-size: 40px;
+                height: 370px;
+                display: flex;
+                align-items: center;
+                @media only screen and (min-width: 600px) {
+                    text-align: center;
+                }
+                @media only screen and (max-width: 450px) {
+                    font-size: 33px;
+                }
+            }
+            .hero span {
+                font-style: italic;
+            }
+
+            main article {
+                font-size: 20px;
+                margin: 40px 0;
+            }
+            main {
+                font-size: 18px;
+            }
+            main h4 {
+                margin: 0;
+                font-size: 25px;
+            }
+            main article span {
+                color: #444;
+                margin-right: 5px;
+            }
+            main .workhow-wrapper {
+                overflow: hidden;
+                @media only screen and (min-width: 800px) {
+                    width: 800px;
+                    position: relative;
+                    left: -45px;
+                }
+            }
+            main .workhow {
+                margin: 0;
+                display: flex;
+                overflow-x: scroll;
+            }
+            main article aside {
+                padding: 10px;
+                background: #f1f6f4;
+                margin: 4px;
+                width: 230px;
+                height: 330px;
+                font-size: 15px;
+                flex-shrink: 0;
+                border-radius: 7px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            main .workhow aside p {
+                height: 50px;
+            }
+            main .workhow aside p:nth-child(2) {
+                font-weight: bold;
+                margin-bottom: 0px;
+                font-size: 25px;
+            }
+            .contact-us * {
+                margin: 0;
+            }
+            .footer-wrapper {
+            }
+            footer {
+                background: linear-gradient(to right, #a1ffce, #faffd1);
+                border-radius: 5px;
+                padding: 10px 20px;
+            }
+            footer p {
+                margin: 3px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-wrapper"></div>
+        <div class="main-wrapper">
+            <header>
+                <div class="logo" style="margin: 0; width: 90px">
+                    <img width="100%" src="logo.png" />
+                </div>
+
+                <div style="margin: 0 5px">
+                    <h1>FOSS<span>CO.</span></h1>
+                    <h4>Free & Open-Source Software</h4>
+                </div>
+            </header>
+            <div class="hero">
+                <article>
+                    You
+                    <span style="text-decoration: line-through">might be</span>
+                    are <strong>paying</strong> for <span>software</span> you
+                    don’t need! Reduce your application costs by switching to
+                    <strong>FOSS</strong>.
+                </article>
+            </div>
+
+            <main>
+                <article style="color: #222; margin-top: 70px">
+                    <h4>FOSS co.</h4>
+                    FOSS co offers Free and Open-Source Software as
+                    cost-effective alternatives to the proprietary software that
+                    are currently in use. These solutions not only eliminate
+                    expensive licensing fees but also provide flexibility,
+                    transparency, and community-driven support.
+                </article>
+                <article>
+                    <h4>How this Work?</h4>
+                    <div class="workhow-wrapper">
+                        <div class="workhow">
+                            <aside>
+                                <div class="icon" style="text-align: center">
+                                    <img src="requirement.png" />
+                                </div>
+                                <div class="howhow">
+                                    <p>
+                                        We meet to dicuss & gather your
+                                        Requirement.
+                                    </p>
+                                    <p><span>1.</span>Requirement</p>
+                                </div>
+                            </aside>
+                            <aside>
+                                <div class="icon" style="text-align: center">
+                                    <img src="search.png" />
+                                </div>
+                                <div class="howhow">
+                                    <p>
+                                        We Search for available FOSS solutions
+                                        that meets the requirement.
+                                    </p>
+                                    <p><span>2.</span>Demo</p>
+                                </div>
+                            </aside>
+                            <aside>
+                                <div class="icon" style="text-align: center">
+                                    <img src="deliver.png" />
+                                </div>
+                                <div class="howhow">
+                                    <p>We Deliver that FOSS Solution to you.</p>
+                                    <p><span>3.</span>Delivery</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+                <!-- <article>
+                    <h4>Manifesto</h4>
+                    We believe that technology should be <span>open</span>,
+                    <span>accessible</span>, and
+                    <span>built for everyone</span>—not subscription based &
+                    support provided by a 3rd Party, who is in no control of the
+                    source. That’s why we’re here. Our mission is open: to
+                    provide powerful, user-friendly alternatives to expensive
+                    proprietary software and help businesses embrace open-source
+                    solutions.
+                </article> -->
+                <div class="faqs">
+                    <!-- <h1>Why adopt FOSS?</h1> -->
+                    <!-- <p>
+                        Properiotory Vendors have Agents selected to Sell their
+                        Software for them. These Agents get a Commision based on
+                        Sales. The higher the Sales the higher the profit
+                        margin. To Maximize the Profit margin, many Agents often
+                        suggest the over priced product.
+                        <!-- Here is an example,
+                        CorelDraw is a good product to draw Vector Graphics, but
+                        cost 6,000 MRF. Inkscape is a FOSS solution, that can
+                        replace Corel Draw for 99% of Users.
+                    </p> -->
+
+                    <!-- <p>
+                        Sales Agent take advantage of the fact, that many people
+                        confuse requirement with features. A product may have
+                        100 of features but you'r requirement could be just 10
+                        of them. Agent often promote these features to hook
+                        people to the product.
+                    </p> -->
+                    <!-- <h1>If it's Free, what is in it for us?</h1> -->
+                </div>
+                <div class="contact-us">
+                    <h2>Get in Touch:</h2>
+                    <h1>+960 9991229</h1>
+
+                    <h2 style="margin-top: 20px">
+                        Interested, to know more...?
+                    </h2>
+                    <p>Why not reach out for a Coffee.</p>
+                </div>
+            </main>
+        </div>
+        <div class="footer-wrapper" style="width: 100%">
+            <footer style="width: 690px; margin: 0 auto">
+                <p>FOSS co is a <strong>public benefit corporation.</strong></p>
+                <p style="font-size: 14px; color: #222; margin-bottom: 20px">
+                    Public benefit corporation is a type of for-profit corporate
+                    entity whose goals include making a positive impact on
+                    society.
+                </p>
+                <p>FOSS co; 2025.</p>
+            </footer>
+        </div>
+    </body>
+</html>

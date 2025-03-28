@@ -11,252 +11,364 @@
                 padding: 0;
                 font-family: sans-serif;
                 width: 100%;
-                /* background: linear-gradient(to right, #a1ffce, #faffd1); */
-            }
-            .header-wrapper {
-                position: absolute;
-                top: 0;
-                height: 560px;
-                width: 100%;
-                background: linear-gradient(to right, #a1ffce, #faffd1);
-                z-index: 0;
-            }
-            .main-wrapper {
-                position: relative;
-                z-index: 10;
-                max-width: 680px;
-                margin: 0 auto;
-                @media only screen and (max-width: 800px) {
-                    max-width: 100%;
-                    margin: 5px 10px;
-                }
-            }
-            .main-wrapper header,
-            .main-wrapper article,
-            .main-wrapper main,
-            .main-wrapper footer {
-                margin: 40px 0;
             }
             header {
                 display: flex;
+                padding: 20px 20px 5px 20px;
+                background: #171717;
+                color: #fff;
             }
-            header h4 {
-                margin: -9px 0 0 3px;
+            .logo {
+                width: 50px;
+                margin-right: 10px;
             }
-            header h3 {
-                font-weight: normal;
+            header h2 {
+                margin: 2px 0 0 0;
             }
-            header h1 {
-                font-size: 50px;
-                margin: 15px 0 0 0;
-            }
-            header h1 span {
-                font-size: 20px;
+            header p {
+                margin-top: -2px;
             }
             .hero {
-                font-size: 40px;
-                height: 400px;
+                height: 450px;
+                font-size: 35px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                @media only screen and (max-width: 800px) {
+                    font-size: 3.7vw;
+                }
+                @media only screen and (max-width: 600px) {
+                    font-size: 5.5vw;
+                }
+                background: radial-gradient(#2a2929 1px, #1c1c1c 0px);
+                background-size: 10px 10px;
+            }
+            .hero p {
+                margin: 0;
+                width: 60%;
+                position: relative;
+                top: -20px;
+            }
+            .main-wrapper {
+                color: #222;
+                width: 100%;
                 display: flex;
                 align-items: center;
-                @media only screen and (min-width: 600px) {
-                    text-align: center;
-                }
-                @media only screen and (max-width: 450px) {
-                    font-size: 33px;
+                flex-direction: column;
+            }
+            .main-wrapper main {
+                margin: 10px;
+                /* font-size: 25px; */
+                width: 650px;
+                @media only screen and (max-width: 650px) {
+                    width: 90%;
                 }
             }
-            .hero span {
-                font-style: italic;
+            .main-wrapper main h1 {
+                font-size: 35px;
             }
+            .main-wrapper .about p {
+                font-size: 25px;
+            }
+            .tiles-wrap {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            aside {
+                width: 250px;
+                border-radius: 6px;
+                margin: 5px;
+                padding: 10px 30px 30px 30px;
+                @media only screen and (max-width: 650px) {
+                    width: 90%;
+                }
+                background: linear-gradient(50deg, #3c3b3b, #1c1c1c);
+                border: 1px solid;
+                /* background: #1c1c1c; */
+                color: #dddddd;
+            }
+            aside h5 {
+                margin: 15px 0px 2px 0px;
+            }
+            aside span {
+                /* color: #b9c9f6; */
+                font-size: 50px;
 
-            main article {
-                font-size: 20px;
-                margin: 20px 0;
+                font-weight: 100;
             }
-            main {
+            aside:hover {
+                color: #eee;
+                background: #1c1c1c;
+            }
+            aside p {
+                font-size: 15px;
+            }
+            .sols {
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+                margin: 5px 0;
+                border-image: linear-gradient(to right, #c7c6c6 0%, #ffff 100%)
+                    1;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #e7e7e7;
+            }
+            .sols .icon {
+                width: 60px;
+                height: 60px;
+
+                border-radius: 5px;
+            }
+            .sols .icon img {
+                width: 100%;
+            }
+            .sols p {
+                margin: 4px 0;
                 font-size: 18px;
             }
-            main h4 {
-                margin: 0;
-                font-size: 25px;
+
+            .sols-details p:nth-of-type(2) {
+                color: #707070;
+                font-size: 14px;
             }
-            main article span {
-                color: #444;
-                margin-right: 5px;
+            .contact-us {
+                margin-top: 35px;
             }
-            main .workhow-wrapper {
-                overflow: hidden;
-                @media only screen and (min-width: 800px) {
-                    width: 800px;
-                    position: relative;
-                    left: -45px;
-                }
-            }
-            main .workhow {
-                margin: 0;
+            .contact-wrapper {
                 display: flex;
-                overflow-x: scroll;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-end;
             }
-            main article aside {
-                padding: 10px;
-                background: #f1f6f4;
-                margin: 4px;
-                width: 230px;
-                height: 330px;
-                font-size: 15px;
-                flex-shrink: 0;
-                border-radius: 7px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
+            .contact-us h2 {
+                margin: 4px 0px;
             }
-            main .workhow aside p {
-                height: 50px;
+            .contact-us h2 span {
+                font-weight: 100;
+                display: inline-block;
+                width: 27px;
             }
-            main .workhow aside p:nth-child(2) {
-                font-weight: bold;
-                margin-bottom: 0px;
-                font-size: 25px;
+            .contact-us a {
+                color: #000;
             }
-            .contact-us * {
-                margin: 0;
+            .contact-us h2 {
+                margin: 4px 0;
             }
-            footer {
+            .contact-us p {
+                margin-top: 4px;
+                font-size: 16px;
+            }
+            .contact-us .contact {
+                min-width: 250px;
+                margin-bottom: 20px;
+            }
+            .subs form {
+                display: inline-block;
+                background: #efefef;
+                padding: 6px;
+                border-radius: 10px;
+            }
+            .subs form input {
+                font-size: 16px;
+                font-weight: 100;
+                padding: 5px 10px;
+                border: 0;
+                background: none;
+            }
+            .subs #btn-subs {
+                font-size: 17px;
                 background: #111;
                 color: #fff;
-                border-radius: 5px;
-                padding: 10px 20px;
+                display: inline-block;
+                padding: 12px 20px;
+                border-radius: 10px;
             }
-            footer p {
-                margin: 3px 0px;
+            .footer-wrap {
+                width: 100%;
+                background: #171717;
+                margin-top: 80px;
+                padding: 50px 0;
+                position: relative;
+                overflow: hidden;
+            }
+            footer {
+                width: 400px;
+                margin: 10px auto;
+                color: #fff;
+                background: #111;
+                padding: 20px;
+                border-radius: 20px;
+                @media only screen and (max-width: 650px) {
+                    width: 85%;
+                }
+                position: relative;
+                z-index: 10;
+                opacity: 0.7;
+            }
+            .footer-wrap h1 {
+                font-size: 33vw;
+                position: absolute;
+                width: 100%;
+                object-fit: cover;
+                bottom: -10px;
+                margin: 0;
+                text-align: center;
+            }
+
+            textarea:focus,
+            input:focus {
+                outline: none;
             }
         </style>
     </head>
     <body>
-        <div class="header-wrapper"></div>
-        <div class="main-wrapper">
-            <header>
-                <div class="logo" style="margin: 0; width: 90px">
-                    <img width="100%" src="logo.png" />
-                </div>
-
-                <div style="margin: 0 5px">
-                    <h1>FOSS<span>CO.</span></h1>
-                    <h4>Free & Open-Source Software</h4>
-                </div>
-            </header>
-            <div class="hero">
-                <article>
-                    You
-                    <span style="text-decoration: line-through">might be</span>
-                    are <strong>paying</strong> for <span>software</span> you
-                    don’t need! Reduce your application costs by switching to
-                    <strong>FOSS</strong>.
-                </article>
+        <header>
+            <div class="logo"><img width="100%" src="logo.png" /></div>
+            <div class="title">
+                <h2>FOSS</h2>
+                <p>Free & Open-Source Software</p>
             </div>
-
+        </header>
+        <div class="hero">
+            <p>
+                You
+                <span style="text-decoration: line-through; color: #444"
+                    >might be</span
+                >
+                are <strong>paying</strong> for <span>software</span> you don’t
+                need! Reduce your application costs by switching to
+                <strong>FOSS</strong>.
+            </p>
+        </div>
+        <div class="main-wrapper">
             <main>
-                <article style="color: #222">
-                    <h4>FOSS co.</h4>
-                    FOSS co offers Free and Open-Source Software as
-                    cost-effective alternatives to the proprietary software that
-                    are currently in use. These solutions not only eliminate
-                    expensive licensing fees but also provide flexibility,
-                    transparency, and community-driven support.
+                <article class="about">
+                    <h1>FOSS co.</h1>
+                    <p>
+                        FOSS co offers Free and Open-Source Software as
+                        cost-effective alternatives to the proprietary software
+                        that are currently in use. These solutions not only
+                        eliminate expensive licensing fees but also provide
+                        flexibility, transparency, and community-driven support.
+                    </p>
                 </article>
                 <article>
-                    <h4>How this Work?</h4>
-                    <div class="workhow-wrapper">
-                        <div class="workhow">
+                    <section>
+                        <h1>How this Works</h1>
+                        <div class="tiles-wrap">
                             <aside>
-                                <div class="icon" style="text-align: center">
-                                    <img src="requirement.png" />
-                                </div>
-                                <div class="howhow">
-                                    <p>
-                                        We meet to dicuss & gather your
-                                        Requirement.
-                                    </p>
-                                    <p><span>1.</span>Requirement</p>
-                                </div>
+                                <h2><span>1</span><br />Requirement</h2>
+                                <p>
+                                    Tell us what you need - your goals, business
+                                    type and features required.
+                                </p>
                             </aside>
                             <aside>
-                                <div class="icon" style="text-align: center">
-                                    <img src="search.png" />
-                                </div>
-                                <div class="howhow">
-                                    <p>
-                                        We Search for available FOSS solutions
-                                        that meets the requirement.
-                                    </p>
-                                    <p><span>2.</span>Search</p>
-                                </div>
+                                <h2><span>2</span><br />Demo</h2>
+                                <p>
+                                    See show our Solution works with a hands-on
+                                    demo, tailored to your needs.
+                                </p>
                             </aside>
-                            <aside>
-                                <div class="icon" style="text-align: center">
-                                    <img src="deliver.png" />
-                                </div>
-                                <div class="howhow">
-                                    <p>We Deliver that FOSS Solution to you.</p>
-                                    <p><span>3.</span>Delivery</p>
-                                </div>
+                            <aside style="flex-basis: content">
+                                <h2><span>3</span><br />Delivery</h2>
+                                <p>
+                                    We set up and implement the solution,
+                                    ensuring a smooth and hassle-free
+                                    experience.
+                                </p>
                             </aside>
                         </div>
-                    </div>
+                    </section>
                 </article>
-                <!-- <article>
-                    <h4>Manifesto</h4>
-                    We believe that technology should be <span>open</span>,
-                    <span>accessible</span>, and
-                    <span>built for everyone</span>—not subscription based &
-                    support provided by a 3rd Party, who is in no control of the
-                    source. That’s why we’re here. Our mission is open: to
-                    provide powerful, user-friendly alternatives to expensive
-                    proprietary software and help businesses embrace open-source
-                    solutions.
-                </article> -->
-                <div class="faqs">
-                    <!-- <h1>Why adopt FOSS?</h1> -->
-                    <!-- <p>
-                        Properiotory Vendors have Agents selected to Sell their
-                        Software for them. These Agents get a Commision based on
-                        Sales. The higher the Sales the higher the profit
-                        margin. To Maximize the Profit margin, many Agents often
-                        suggest the over priced product.
-                        <!-- Here is an example,
-                        CorelDraw is a good product to draw Vector Graphics, but
-                        cost 6,000 MRF. Inkscape is a FOSS solution, that can
-                        replace Corel Draw for 99% of Users.
-                    </p> -->
-
-                    <!-- <p>
-                        Sales Agent take advantage of the fact, that many people
-                        confuse requirement with features. A product may have
-                        100 of features but you'r requirement could be just 10
-                        of them. Agent often promote these features to hook
-                        people to the product.
-                    </p> -->
-                    <!-- <h1>If it's Free, what is in it for us?</h1> -->
-                </div>
+                <article>
+                    <section>
+                        <h1>Solutions</h1>
+                        <div class="sols">
+                            <div class="icon">
+                                <img src="inkscapelogo.png" />
+                            </div>
+                            <div class="sols-details">
+                                <p>Inkscape</p>
+                                <p>Alternative to CorelDraw</p>
+                            </div>
+                        </div>
+                        <div class="sols">
+                            <div class="icon">
+                                <img src="pdfgearlogo.png" />
+                            </div>
+                            <div class="sols-details">
+                                <p>PDFGear</p>
+                                <p>Alternative to Adobe Acrobat</p>
+                            </div>
+                        </div>
+                        <div class="sols">
+                            <div class="icon">
+                                <img src="signaturelogo.png" />
+                            </div>
+                            <div class="sols-details">
+                                <p>Documenso</p>
+                                <p>Alternative to DocuSign</p>
+                            </div>
+                        </div>
+                        <div class="sols">
+                            <div class="icon">
+                                <img src="analytics.png" />
+                            </div>
+                            <div class="sols-details">
+                                <p>Metabase</p>
+                                <p>Alternative to PowerBi</p>
+                            </div>
+                        </div>
+                        <p>& there is more...</p>
+                    </section>
+                </article>
                 <div class="contact-us">
-                    <h2>Get in Touch:</h2>
-                    <h1>+960 9991229</h1>
+                    <h1>Get in Touch</h1>
+                    <div class="contact-wrapper">
+                        <div class="contact">
+                            <h2>
+                                <span>e:</span
+                                ><a href="mailto:hello@foss.mv"
+                                    >hello@foss.mv</a
+                                >
+                            </h2>
+                            <h2>
+                                <span>m:</span
+                                ><a href="https://wa.me/message/5UHVETY2DJUFO1"
+                                    >WhatsApp</a
+                                >
+                            </h2>
+                        </div>
 
-                    <h2 style="margin-top: 20px">
-                        Interested, to know more...?
-                    </h2>
-                    <p>Why not reach out for a Coffee.</p>
+                        <div class="subs">
+                            <h2>Join the Newsletter</h2>
+                            <p>Updates from FOSS ( news, tips & how-to )</p>
+                            <form>
+                                <input placeholder="email@address.com" />
+                                <div id="btn-subs">Subscribe</div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </main>
-            <footer>
-                <p>FOSS co is a <strong>public benefit corporation.</strong></p>
-                <p style="font-size: 14px; color: #ccc; margin-bottom: 20px">
-                    Public benefit corporation is a type of for-profit corporate
-                    entity whose goals include making a positive impact on
-                    society.
-                </p>
-                <p>FOSS co; 2025.</p>
-            </footer>
+            <div class="footer-wrap">
+                <footer>
+                    <p>
+                        FOSS co is a
+                        <strong>public benefit corporation.</strong>
+                    </p>
+                    <p>
+                        Public benefit corporation is a type of for-profit
+                        corporate entity whose goals include making a positive
+                        impact on society.
+                    </p>
+                    <p>FOSS co; 2025.</p>
+                </footer>
+                <h1>FOSS</h1>
+            </div>
         </div>
     </body>
 </html>
